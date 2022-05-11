@@ -6,58 +6,33 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LocalFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class LocalFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public LocalFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LocalFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static LocalFragment newInstance(String param1, String param2) {
-        LocalFragment fragment = new LocalFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private ArrayList<SongModel> dataList;
+    private SongAdapter adapter;
+    private RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_local, container, false);
+        View view =  inflater.inflate(R.layout.fragment_local, container, false);
+        recyclerView = view.findViewById(R.id.RecyclerView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        dataList = new ArrayList<>();
+
+        dataList.add(new SongModel("Song 1", "Album 1", "https://firebasestorage.googleapis.com/v0/b/loopmusic-velu.appspot.com/o/songs%2FJalabulajangu-MassTamilan.fm.mp3?alt=media&token=b0fa9584-b9d5-452e-924c-02f7cbdb5cef"));
+        dataList.add(new SongModel("Song 2", "Album 2", "https://firebasestorage.googleapis.com/v0/b/loopmusic-velu.appspot.com/o/songs%2FJalabulajangu-MassTamilan.fm.mp3?alt=media&token=b0fa9584-b9d5-452e-924c-02f7cbdb5cef"));
+        dataList.add(new SongModel("Song 3", "Album 3", "https://firebasestorage.googleapis.com/v0/b/loopmusic-velu.appspot.com/o/songs%2FJalabulajangu-MassTamilan.fm.mp3?alt=media&token=b0fa9584-b9d5-452e-924c-02f7cbdb5cef"));
+        dataList.add(new SongModel("Song 4", "Album 4", "https://firebasestorage.googleapis.com/v0/b/loopmusic-velu.appspot.com/o/songs%2FJalabulajangu-MassTamilan.fm.mp3?alt=media&token=b0fa9584-b9d5-452e-924c-02f7cbdb5cef"));
+        adapter = new SongAdapter(dataList, getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(adapter);
+
+        return view;
     }
 }

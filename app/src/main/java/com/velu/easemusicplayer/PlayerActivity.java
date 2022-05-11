@@ -58,7 +58,8 @@ public class PlayerActivity extends AppCompatActivity {
 
     private void createNotification(String title, String album) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel channel = new NotificationChannel("Song Playing", "Song Playing", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel("Song Playing", "Song Playing",
+                    NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }

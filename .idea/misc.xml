@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.25" />
+        <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/fragment_local.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/fragment_online.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/ic_launcher_foreground.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/layout/song_item.xml" value="0.25" />
         <entry key="..\:/Users/velmu/AndroidStudioProjects/EaseMusicPlayer/app/src/main/res/menu/bottom_nav.xml" value="0.24635416666666668" />
       </map>
     </option>
