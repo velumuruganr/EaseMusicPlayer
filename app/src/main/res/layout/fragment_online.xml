@@ -9,10 +9,7 @@
     <ImageView
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#B83030"
+        android:layout_height="220dp"
         android:src="@drawable/ic_music" />
-
-
 
 </FrameLayout>

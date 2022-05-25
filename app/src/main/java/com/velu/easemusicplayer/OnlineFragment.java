@@ -7,11 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-
-import java.util.ArrayList;
 
 public class OnlineFragment extends Fragment {
 
@@ -32,15 +27,14 @@ public class OnlineFragment extends Fragment {
                     sliderView.post(new Runnable() {
                         @Override
                         public void run() {
-
                             if (sliderView.getTag().equals(1)) {
-                                sliderView.setImageResource(R.drawable.ic_music);
+                                sliderView.setImageResource(R.drawable.song1);
                                 sliderView.setTag(2);
                             } else if (sliderView.getTag().equals(2)) {
-                                sliderView.setImageResource(R.drawable.ic_play);
+                                sliderView.setImageResource(R.drawable.song2);
                                 sliderView.setTag(3);
                             } else if (sliderView.getTag().equals(3)) {
-                                sliderView.setImageResource(R.drawable.ic_pause);
+                                sliderView.setImageResource(R.drawable.song3);
                                 sliderView.setTag(1);
                             }
                         }
