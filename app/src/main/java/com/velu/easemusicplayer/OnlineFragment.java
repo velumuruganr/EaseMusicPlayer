@@ -47,9 +47,7 @@ public class OnlineFragment extends Fragment {
                 }
             }
         }).start();
-
-
-
+        
         return view;
 
     }
