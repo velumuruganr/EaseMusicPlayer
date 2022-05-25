@@ -1,14 +1,11 @@
 package com.velu.easemusicplayer;
 
 import android.Manifest;
-import android.app.DownloadManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
