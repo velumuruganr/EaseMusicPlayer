@@ -45,8 +45,6 @@ public class PlayerActivity extends AppCompatActivity {
         button = findViewById(R.id.playpausebtn);
         download_icon = findViewById(R.id.download_icon);
 
-
-
         i = getIntent();
         albumView.setText(i.getStringExtra("album"));
         titleView.setText(i.getStringExtra("title"));

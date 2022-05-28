@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -92,5 +93,14 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("link", songModel.getLink());
         startActivity(i);
 
+    }
+    public void ClickFunction2(List<RssFeedsModel> feedList, int adapterPosition) {
+
+        RssFeedsModel feedsModel = feedList.get(adapterPosition);
+        Intent i = new Intent(MainActivity.this, RssFeedsActivity.class);
+        i.putExtra("title", feedsModel.getTitle());
+        i.putExtra("description", feedsModel.getDescription());
+        i.putExtra("link", feedsModel.getLink());
+        startActivity(i);
     }
 }
